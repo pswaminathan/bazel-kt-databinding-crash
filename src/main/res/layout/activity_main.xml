@@ -1,0 +1,15 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data>
+        <variable
+            name="visibility"
+            type="int" />
+    </data>
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="@{visibility}"
+    android:text="Hello World"/>
+</layout>
