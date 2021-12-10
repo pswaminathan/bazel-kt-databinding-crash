@@ -1,10 +1,8 @@
 package com.example.databinding
 
-// import androidx.room.Entity
 import com.squareup.moshi.JsonClass
-import java.util.*
+import java.util.Date
 
-// @Entity(tableName = "Favorites", primaryKeys = ["id", "userId"])
 data class Favorite(
         val id: Int,
         val userId: Int,
