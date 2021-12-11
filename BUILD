@@ -14,25 +14,33 @@ kt_compiler_plugin(
 
 kt_android_library(
     name = "app_lib",
+    srcs = glob(["src/main/java/**/*.kt"]),
+    custom_package = "com.example.databinding.lib", # All databinding targets must have unique package name
     enable_data_binding = True,
-    custom_package = "com.example.databinding",
-    srcs = glob(["src/main/java/**/*.kt",]),
-    resource_files = glob(["src/main/res/**/*"]),
     manifest = "src/main/AndroidManifest.xml",
-    deps = [
-        "@maven//:com_squareup_moshi_moshi",
-    ],
     plugins = [
         ":moshi_kotlin_codegen",
-    ]
+    ],
+    resource_files = glob(["src/main/res/**/*"]),
+    deps = [
+        "@maven//:androidx_annotation_annotation",
+        "@maven//:androidx_databinding_databinding_adapters",
+        "@maven//:androidx_databinding_databinding_common",
+        "@maven//:androidx_databinding_databinding_runtime",
+        "@maven//:com_squareup_moshi_moshi",
+    ],
 )
 
 android_binary(
     name = "app",
-    enable_data_binding = True,
     custom_package = "com.example.databinding",
+    enable_data_binding = True,
     manifest = "src/main/AndroidManifest.xml",
     deps = [
         ":app_lib",
+        "@maven//:androidx_annotation_annotation",
+        "@maven//:androidx_databinding_databinding_adapters",
+        "@maven//:androidx_databinding_databinding_common",
+        "@maven//:androidx_databinding_databinding_runtime",
     ],
 )
