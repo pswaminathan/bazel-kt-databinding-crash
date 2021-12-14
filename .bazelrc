@@ -1,0 +1,17 @@
+build --verbose_failures
+build --nouse_workers_with_dexbuilder
+build --incompatible_disable_depset_items
+build --strategy=Desugar=sandboxed
+build --announce_rc
+
+# Databinding flags
+build --experimental_android_databinding_v2
+build --android_databinding_use_v3_4_args
+build --android_databinding_use_androidx
+
+# Flags to enable latest android providers in rules
+build --experimental_google_legacy_api
+
+build --persistent_android_resource_processor
+
+try-import local.bazelrc

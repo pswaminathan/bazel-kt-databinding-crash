@@ -8,13 +8,23 @@ http_archive(
     url = "https://github.com/bazelbuild/rules_jvm_external/archive/%s.zip" % RULES_JVM_EXTERNAL_TAG,
 )
 
+bind(
+    name = "databinding_annotation_processor",
+    actual = "//tools/android:compiler_annotation_processor",
+)
+
 load("@rules_jvm_external//:defs.bzl", "maven_install")
 
 maven_install(
     artifacts = [
-        "com.squareup.moshi:moshi:1.9.2",
-        "com.squareup.moshi:moshi-kotlin-codegen:1.9.2",
+        "com.squareup.moshi:moshi:1.12.0",
+        "com.squareup.moshi:moshi-kotlin-codegen:1.12.0",
+        "androidx.databinding:databinding-adapters:3.4.2",
+        "androidx.databinding:databinding-common:3.4.2",
+        "androidx.databinding:databinding-compiler:3.4.2",
+        "androidx.databinding:databinding-runtime:3.4.2",
     ],
+    # jetify = True,
     repositories = [
         "https://jcenter.bintray.com/",
         "https://maven.google.com",
@@ -25,6 +35,8 @@ maven_install(
 
 android_sdk_repository(
   name = "androidsdk",
+  api_level = 30,
+  build_tools_version = "30.0.3",
 )
 
 http_archive(
