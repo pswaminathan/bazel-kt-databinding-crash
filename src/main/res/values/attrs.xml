@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="IconToggleButton">
+        <attr name="android:text" format="string" />
+        <attr name="android:letterSpacing" format="float" />
+        <attr name="android:textSize" format="dimension" />
+        <attr name="android:fontFamily" format="reference" />
+        <attr name="android:textColor" format="reference" />
+        <attr name="android:drawableTint" format="reference" />
+        <attr name="icon" format="reference" />
+        <attr name="colorTheme" format="enum">
+            <enum name="DEFAULT" value="0" />
+            <enum name="DARK" value="1" />
+            <enum name="CREAM" value="2" />
+        </attr>
+        <attr name="themeCream" format="boolean" />
+        <attr name="themeDark" format="boolean" />
+    </declare-styleable>
+</resources>
