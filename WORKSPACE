@@ -75,6 +75,7 @@ maven_install(
         # "com.google.dagger:dagger-compiler:2.35.1",
         # "com.google.dagger:dagger-producers:2.35.1",
         # "com.squareup.moshi:moshi:1.9.2",
+        'androidx.core:core-ktx:1.3.2',
         "com.squareup.moshi:moshi-kotlin-codegen:1.11.0",
         "androidx.databinding:databinding-adapters:3.4.2",
         "androidx.databinding:databinding-common:3.4.2",

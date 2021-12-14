@@ -10,6 +10,9 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.ViewOutlineProvider
 import com.example.databinding.lib.R
+import com.example.databinding.dpToPx
+import com.example.databinding.getFont
+import com.example.databinding.spToPx
 
 class IconToggleButton @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
@@ -49,7 +52,7 @@ class IconToggleButton @JvmOverloads constructor(
                 icon.setTintList(it.getColorStateList(R.styleable.IconToggleButton_android_drawableTint) ?: ColorStateList.valueOf(0xFF000000.toInt()))
                 textPaint.letterSpacing = it.getFloat(R.styleable.IconToggleButton_android_letterSpacing, 0f)
                 textPaint.textSize = it.getDimension(R.styleable.IconToggleButton_android_textSize, 15f)
-                textPaint.typeface = getFont(it.getResourceId(R.styleable.IconToggleButton_android_fontFamily, R.font.pressura_light))
+                // textPaint.typeface = getFont(it.getResourceId(R.styleable.IconToggleButton_android_fontFamily, R.font.pressura_light))
                 text = it.getString(R.styleable.IconToggleButton_android_text) ?: ""
                 colorTheme = it.getInt(R.styleable.IconToggleButton_colorTheme, 0)
             } finally {

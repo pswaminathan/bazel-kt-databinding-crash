@@ -30,6 +30,8 @@ kt_db_android_library(
         # "@maven//:androidx_databinding_databinding_common",
         # "@maven//:androidx_databinding_databinding_runtime",
         "@maven//:com_squareup_moshi_moshi",
+        "@maven//:androidx_core_core",
+        "@maven//:androidx_core_core_ktx",
     ],
 )
 
