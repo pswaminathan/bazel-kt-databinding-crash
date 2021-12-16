@@ -16,4 +16,11 @@
         <attr name="themeCream" format="boolean" />
         <attr name="themeDark" format="boolean" />
     </declare-styleable>
+
+    <declare-styleable name="Spinner">
+        <attr name="android:entries" format="reference" />
+        <attr name="closedColor" format="color" />
+        <attr name="openColor" format="color" />
+        <attr name="clipTop" format="dimension" />
+    </declare-styleable>
 </resources>
