@@ -1,4 +1,4 @@
-package com.databinding.example
+package com.example.databinding
 
 import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.dynamicanimation.animation.FloatValueHolder

@@ -18,8 +18,8 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.isVisible
 import androidx.databinding.InverseBindingAdapter
 import androidx.databinding.InverseBindingListener
-import com.databinding.example.lib.R
-import com.databinding.example.*
+import com.example.databinding.lib.R
+import com.example.databinding.*
 import java.util.*
 import kotlin.math.max
 import kotlin.math.min
@@ -67,14 +67,14 @@ class Spinner<T: Enum<T>> @JvmOverloads constructor(
     private val rect = Rect()
 
     private val title = Paint().apply {
-        typeface = getFont(R.font.trade_gothic)
+        // typeface = getFont(R.font.trade_gothic)
         isAntiAlias = true
         color = Color.WHITE
         textSize = 15.spToPx()
         letterSpacing = 0.08f
     }
     private val label = Paint().apply {
-        typeface = getFont(R.font.pressura_light)
+        // typeface = getFont(R.font.pressura_light)
         isAntiAlias = true
         color = 0x88ffffff.toInt()
         textSize = 15.spToPx()
@@ -110,20 +110,20 @@ class Spinner<T: Enum<T>> @JvmOverloads constructor(
 
         addView(scroll)
 
-        val f = getFont(R.font.pressura_light)
+        // val f = getFont(R.font.pressura_light)
         optionNames.forEachIndexed { index, name ->
             ll.addView(TextView(context).apply {
                 text = name
                 layoutParams = LinearLayout.LayoutParams(MATCH_PARENT, itemHeight)
                 setTextColor(Color.WHITE)
-                setTypeface(f, Typeface.NORMAL)
+                // setTypeface(f, Typeface.NORMAL)
                 textSize = 15f
                 letterSpacing = 0.05f
                 gravity = CENTER_VERTICAL
                 setPadding(34.dpToPx().toInt(), 0, 0, 0)
-                background = ResourcesCompat.getDrawable(resources,
-                    if (index > 0)  R.drawable.button_transparent_with_border else R.drawable.button_transparent,
-                    null)
+                // background = ResourcesCompat.getDrawable(resources,
+                //     if (index > 0)  R.drawable.button_transparent_with_border else R.drawable.button_transparent,
+                //     null)
                 setOnClickListener {
                     selectedItem = values[index]
                     selectionListener?.onChange()

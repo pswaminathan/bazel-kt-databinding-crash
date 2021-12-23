@@ -77,7 +77,7 @@ maven_install(
         # "com.squareup.moshi:moshi:1.9.2",
         'androidx.core:core-ktx:1.3.2',
         "com.google.android.material:material:1.3.0",
-        "com.squareup.moshi:moshi-kotlin-codegen:1.11.0",
+        "com.squareup.moshi:moshi-kotlin-codegen:1.12.0",
         "androidx.databinding:databinding-adapters:3.4.2",
         "androidx.databinding:databinding-common:3.4.2",
         "androidx.databinding:databinding-compiler:3.4.2",
