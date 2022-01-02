@@ -78,6 +78,8 @@ maven_install(
         'androidx.core:core-ktx:1.3.2',
         "com.google.android.material:material:1.3.0",
         "com.squareup.moshi:moshi-kotlin-codegen:1.12.0",
+        "androidx.paging:paging-runtime-ktx:2.1.2",
+        'androidx.recyclerview:recyclerview:1.2.0',
         "androidx.databinding:databinding-adapters:3.4.2",
         "androidx.databinding:databinding-common:3.4.2",
         "androidx.databinding:databinding-compiler:3.4.2",

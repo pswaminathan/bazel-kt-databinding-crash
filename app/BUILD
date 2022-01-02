@@ -48,6 +48,8 @@ kt_db_android_library(
         "@maven//:com_squareup_moshi_moshi",
         "@maven//:androidx_core_core",
         "@maven//:androidx_core_core_ktx",
+        "@maven//:androidx_paging_paging_runtime",
+        "@maven//:androidx_recyclerview_recyclerview",
         "@maven//:com_google_android_material_material",
     ],
 )
