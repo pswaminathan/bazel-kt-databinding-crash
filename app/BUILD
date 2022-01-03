@@ -3,15 +3,6 @@ load("@io_bazel_rules_kotlin//kotlin:core.bzl", "kt_compiler_plugin")
 load("@grab_bazel_common//tools/databinding:databinding.bzl", "kt_db_android_library")
 
 
-# kt_compiler_plugin(
-#     name = "moshi_kotlin_codegen",
-#     id = "com.squareup.moshi.kotlin.codegen",
-#     target_embedded_compiler = True,
-#     compile_phase = True,
-#     stubs_phase = True,
-#     deps = ["@maven//:com_squareup_moshi_moshi_kotlin_codegen",]
-# )
-
 java_plugin(
     name = "moshi_kotlin_codegen_plugin",
     processor_class = "com.squareup.moshi.kotlin.codegen.JsonClassCodegenProcessor",
