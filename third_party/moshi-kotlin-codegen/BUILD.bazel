@@ -1,0 +1,15 @@
+java_plugin(
+    name = "moshi-kotlin-codegen-plugin",
+    processor_class = "com.squareup.moshi.kotlin.codegen.JsonClassCodegenProcessor",
+    deps = [
+      "@maven//:com_squareup_moshi_moshi_kotlin_codegen",
+    ],
+    generates_api = True,
+    # visibility = ["//visibility:public"],
+)
+
+java_library(
+    name = "moshi-kotlin-codegen",
+    exported_plugins = [":moshi-kotlin-codegen-plugin"],
+    visibility = ["//visibility:public"],
+)
