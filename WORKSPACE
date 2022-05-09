@@ -25,15 +25,9 @@ android_sdk_repository(
 
 http_archive(
     name = "io_bazel_rules_kotlin",
-    sha256 = "12d22a3d9cbcf00f2e2d8f0683ba87d3823cb8c7f6837568dd7e48846e023307",
-    urls = ["https://github.com/bazelbuild/rules_kotlin/releases/download/v1.5.0/rules_kotlin_release.tgz"],
+    urls = ["https://github.com/bazelbuild/rules_kotlin/releases/download/1.6.0-RC-1/rules_kotlin_release.tgz"],
+    sha256 = "f1a4053eae0ea381147f5056bb51e396c5c494c7f8d50d0dee4cc2f9d5c701b0",
 )
-
-# http_archive(
-#     name = "io_bazel_rules_kotlin",
-#     urls = ["https://github.com/bazelbuild/rules_kotlin/releases/download/1.6.0-RC-1/rules_kotlin_release.tgz"],
-#     sha256 = "f1a4053eae0ea381147f5056bb51e396c5c494c7f8d50d0dee4cc2f9d5c701b0",
-# )
 
 
 load("@io_bazel_rules_kotlin//kotlin:repositories.bzl", "kotlin_repositories")
