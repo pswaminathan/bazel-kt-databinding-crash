@@ -25,3 +25,5 @@ hs_err_pid*
 # Bazel environment
 /bazel-*
 *.sublime-*
+
+.aswb
