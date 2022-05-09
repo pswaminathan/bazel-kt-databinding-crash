@@ -3,31 +3,6 @@ load("@io_bazel_rules_kotlin//kotlin:core.bzl", "kt_compiler_plugin")
 load("@grab_bazel_common//tools/databinding:databinding.bzl", "kt_db_android_library")
 
 
-# kt_compiler_plugin(
-#     name = "moshi_kotlin_codegen",
-#     id = "com.squareup.moshi.kotlin.codegen",
-#     target_embedded_compiler = True,
-#     compile_phase = True,
-#     stubs_phase = True,
-#     deps = ["@maven//:com_squareup_moshi_moshi_kotlin_codegen",]
-# )
-
-java_plugin(
-    name = "moshi_kotlin_codegen_plugin",
-    processor_class = "com.squareup.moshi.kotlin.codegen.JsonClassCodegenProcessor",
-    deps = [
-      "@maven//:com_squareup_moshi_moshi_kotlin_codegen",
-    ],
-    generates_api = True,
-    # visibility = ["//visibility:public"],
-)
-
-java_library(
-    name = "moshi_kotlin_codegen",
-    exported_plugins = [":moshi_kotlin_codegen_plugin"],
-    visibility = ["//visibility:public"],
-)
-
 # kt_android_library(
 kt_db_android_library(
     name = "app_lib",
@@ -44,10 +19,12 @@ kt_db_android_library(
         # "@maven//:androidx_databinding_databinding_adapters",
         # "@maven//:androidx_databinding_databinding_common",
         # "@maven//:androidx_databinding_databinding_runtime",
-        ":moshi_kotlin_codegen",
+        "//third_party/moshi-kotlin-codegen",
         "@maven//:com_squareup_moshi_moshi",
         "@maven//:androidx_core_core",
         "@maven//:androidx_core_core_ktx",
+        "@maven//:androidx_paging_paging_runtime",
+        "@maven//:androidx_recyclerview_recyclerview",
         "@maven//:com_google_android_material_material",
     ],
 )

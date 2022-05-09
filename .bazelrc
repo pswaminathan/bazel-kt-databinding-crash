@@ -3,3 +3,4 @@ build --experimental_android_databinding_v2
 build --android_databinding_use_v3_4_args
 build --android_databinding_use_androidx
 query --experimental_google_legacy_api
+build --experimental_strict_java_deps=off # https://github.com/bazelbuild/bazel/issues/13647
