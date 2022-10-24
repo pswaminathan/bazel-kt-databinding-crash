@@ -5,6 +5,8 @@ import android.content.res.Resources
 import android.graphics.Typeface
 import android.util.TypedValue
 import android.view.View
+import androidx.core.content.res.ResourcesCompat
+import androidx.databinding.BindingAdapter
 import kotlin.math.max
 import kotlin.math.min
 
@@ -22,7 +24,7 @@ fun View.getFont(id: Int): Typeface? {
     return if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
         resources.getFont(id)
     } else {
-        androidx.core.content.res.ResourcesCompat.getFont(context, id)
+        ResourcesCompat.getFont(context, id)
     }
 }
 
@@ -30,7 +32,15 @@ fun Context.getFont(id: Int): Typeface? {
     return if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
         resources.getFont(id)
     } else {
-        androidx.core.content.res.ResourcesCompat.getFont(this, id)
+        ResourcesCompat.getFont(this, id)
+    }
+}
+
+object IconToggleButtonAdapters {
+    @BindingAdapter("iconToggleTxt")
+    @JvmStatic
+    fun setTxt(view: IconToggleButton, txt: String) {
+        view.text = txt
     }
 }
 

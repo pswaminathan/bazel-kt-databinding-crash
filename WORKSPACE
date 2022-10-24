@@ -25,8 +25,8 @@ android_sdk_repository(
 
 http_archive(
     name = "io_bazel_rules_kotlin",
-    sha256 = "12d22a3d9cbcf00f2e2d8f0683ba87d3823cb8c7f6837568dd7e48846e023307",
-    urls = ["https://github.com/bazelbuild/rules_kotlin/releases/download/v1.5.0/rules_kotlin_release.tgz"],
+    sha256 = "946747acdbeae799b085d12b240ec346f775ac65236dfcf18aa0cd7300f6de78",
+    urls = ["https://github.com/bazelbuild/rules_kotlin/releases/download/v1.7.0-RC-2/rules_kotlin_release.tgz"],
 )
 
 # http_archive(
@@ -66,10 +66,10 @@ git_repository(
 
 load("@grab_bazel_common//:workspace_defs.bzl", "GRAB_BAZEL_COMMON_ARTIFACTS")
 
-DAGGER_TAG = "2.40.5"
+DAGGER_TAG = "2.43.2"
 http_archive(
     name = "dagger",
-    sha256 = "5a6923e56edbc1e34c8089ecab5338a1b8ddb79a3a54b6c86cdcf31212680d32",
+    sha256 = "f7fbc3e417b3cdc10e76e818a6854ada777ad6d408408b65c23a096f3ff6daf7",
     strip_prefix = "dagger-dagger-%s" % DAGGER_TAG,
     urls = ["https://github.com/google/dagger/archive/dagger-%s.zip" % DAGGER_TAG],
 )
@@ -84,13 +84,14 @@ maven_install(
         # "com.squareup.moshi:moshi:1.9.2",
         'androidx.core:core-ktx:1.3.2',
         "com.google.android.material:material:1.3.0",
-        "com.squareup.moshi:moshi-kotlin-codegen:1.12.0",
+        "com.squareup.moshi:moshi-kotlin-codegen:1.13.0",
         "androidx.paging:paging-runtime-ktx:2.1.2",
         'androidx.recyclerview:recyclerview:1.2.0',
         "androidx.databinding:databinding-adapters:3.4.2",
         "androidx.databinding:databinding-common:3.4.2",
         "androidx.databinding:databinding-compiler:3.4.2",
         "androidx.databinding:databinding-runtime:3.4.2",
+        "androidx.databinding:viewbinding:7.0.4",
     ],
     repositories = [
         "https://jcenter.bintray.com/",
