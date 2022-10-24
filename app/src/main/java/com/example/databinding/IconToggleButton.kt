@@ -13,6 +13,7 @@ import com.example.databinding.lib.R
 import com.example.databinding.dpToPx
 import com.example.databinding.getFont
 import com.example.databinding.spToPx
+import com.example.otherpkg.MyModel
 
 class IconToggleButton @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
@@ -42,6 +43,8 @@ class IconToggleButton @JvmOverloads constructor(
     private val textPaint = Paint().apply {
         isAntiAlias = true
     }
+
+    fun setObjects(l: List<MyModel>) {}
 
     init {
         context.theme.obtainStyledAttributes(attrs, R.styleable.IconToggleButton, 0, 0).let {
